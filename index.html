@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="text">
+        <h2>
+          Generate a
+          <h2 style="color: #10b981">random password</h2>
+        </h2>
+        <p>Never use an insecure password again.</p>
+      </div>
+      <div class="option">
+        <fieldset>
+          <label for="userInputLength">password length</label>
+          <input type="text" id="userInputLength" value="15" />
+          <div>
+            <p>Passwords will contain:</p>
+            <div>
+              <input type="checkbox" name="alphabet" id="alphabet" />
+              <label for="alphabet">Letters (A–Z, a–z)</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="numbers"
+                id="numbers"
+                class="check-box"
+              />
+              <label for="numbers">Numbers (0–9)</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="special"
+                id="special"
+                class="check-box"
+              />
+              <label for="special">Special characters (!, @, #, etc.)</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <!-- <p id="check"></p> -->
+      <button id="generate-btn" onclick="generatePass()">
+        Generate passwords
+      </button>
+
+      <hr />
+
+      <div class="passwords">
+        <div class="password">
+          <div id="password1-el">
+            <p id="password1"></p>
+          </div>
+          <button onclick="copy1()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-copy"
+            >
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path
+                d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div class="password">
+          <div id="password2-el"><p id="password2"></p></div>
+          <button onclick="copy2()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-copy"
+            >
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path
+                d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
